@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M'biya-news-line/home</title><style>
+       
+    </style>
+</head>
+<body style="height: 100vh; width: 100%; display: flex; flex-direction: column;align-items: center;justify-content: center;">
+    <h1 style="border: 1px solid black; background: #fff; border-radius: 7px;padding: 4px 9px;">click Me to change background Color</h1>
+    <h2>INFI-TECH: background Color :<span></span></h2>
+    
+<script>
+   const hex =["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"]
+   const h1  = document.querySelector('h1')
+   const span = document.querySelector('span')
+
+   h1.addEventListener('click', function(){
+       let color = "#"
+
+       for (let index = 0; index < 6; index++) {
+           color += hex[getcolor()];
+           
+       }
+       console.log(color);
+       document.body.style.backgroundColor =color
+       span.textContent = color
+   })
+
+   function getcolor() {
+       return Math.floor(Math.random()*hex.length)
+   }
+</script>
+
+</body>
+</html>
